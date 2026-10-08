@@ -3,8 +3,9 @@ import React from "react";
 export default function Form_component(props) {
   const {value,idx,Data,SetData,SetFname,SetLname,SetAge,SetGender,SetEmail,SetPassword,SetCity,SetAddress,SetUpdate,SetUpindex} = props;
 
-  const DeleteHandle = (index) => {
+  const DeleteHandle = (index) => {    
     SetData( Data.filter((v, i) => i !== index))
+
   };
 
   const EditHandle = (index) => {
@@ -17,9 +18,7 @@ export default function Form_component(props) {
     SetCity(Data[index].City);
     SetAddress(Data[index].Address);
     SetUpdate(true);
-    SetUpindex(index);
-
-   
+    SetUpindex(index);   
   };
 
   return (

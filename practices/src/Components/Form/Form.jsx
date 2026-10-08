@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Form_insert from './Form_insert'
 import Form_note from './Form_note'
 import Form_component from './Form_component'
+import Form_search from './Form_search'
 
 export default function Form() {
   let [Fname, SetFname] = useState("")
@@ -16,60 +17,78 @@ export default function Form() {
   let [Update, SetUpdate] = useState(false)
   let [UpdateData, SetUpdateData] = useState({})
   let [Upindex, SetUpindex] = useState(null)
+  let [Find, SetFind] = useState(false)
   return (
     <>
-      <div className=' '>
-        <div className='w-full'>
-          <Form_insert
-            Data={Data}
-            Fname={Fname}
-            Lname={Lname}
-            Age={Age}
-            Gender={Gender}
-            Email={Email}
-            Password={Password}
-            City={City}
-            Address={Address}
-            SetData={SetData}
-            SetAddress={SetAddress}
-            SetFname={SetFname}
-            SetLname={SetLname}
-            SetAge={SetAge}
-            SetGender={SetGender}
-            SetEmail={SetEmail}
-            SetPassword={SetPassword}
-            SetCity={SetCity}
-            UpdateData={UpdateData}
-            SetUpdateData={SetUpdateData}
-            Upindex={Upindex}
-            SetUpindex={SetUpindex}
-            Update={Update}
-            SetUpdate={SetUpdate}
-          />
-        </div>
-        {Data[0] && <div className='w-full  ' >
-          <Form_note
-            Data={Data}
-            SetData={SetData}
-            Fname={Fname}
-            Lname={Lname}
-            SetAddress={SetAddress}
-            SetFname={SetFname}
-            SetLname={SetLname}
-            SetAge={SetAge}
-            SetGender={SetGender}
-            SetEmail={SetEmail}
-            SetPassword={SetPassword}
-            SetCity={SetCity}
-            SetUpdate={SetUpdate}
-           
-            SetUpdateData={SetUpdateData}
-            Upindex={Upindex}
-            SetUpindex={SetUpindex}
-          />
-        </div>}
-      </div>
 
+      <div className='w-full'>
+        <Form_insert
+          Data={Data}
+          Fname={Fname}
+          Lname={Lname}
+          Age={Age}
+          Gender={Gender}
+          Email={Email}
+          Password={Password}
+          City={City}
+          Address={Address}
+          SetData={SetData}
+          SetAddress={SetAddress}
+          SetFname={SetFname}
+          SetLname={SetLname}
+          SetAge={SetAge}
+          SetGender={SetGender}
+          SetEmail={SetEmail}
+          SetPassword={SetPassword}
+          SetCity={SetCity}
+          UpdateData={UpdateData}
+          SetUpdateData={SetUpdateData}
+          Upindex={Upindex}
+          SetUpindex={SetUpindex}
+          Update={Update}
+          SetUpdate={SetUpdate}
+        />
+      </div>
+      <Form_search
+        Data={Data}
+        Find={Find}
+        SetFind={SetFind}
+        SetAddress={SetAddress}
+        SetFname={SetFname}
+        SetLname={SetLname}
+        SetAge={SetAge}
+        SetGender={SetGender}
+        SetEmail={SetEmail}
+        SetPassword={SetPassword}
+        SetCity={SetCity}
+        SetUpdate={SetUpdate}
+        SetUpindex={SetUpindex}
+        SetData={SetData}
+
+
+      />
+      {Data[0] && !Find &&<div className='w-full  ' >
+        <Form_note
+          Data={Data}
+          SetData={SetData}
+          Fname={Fname}
+          Lname={Lname}
+          SetAddress={SetAddress}
+          SetFname={SetFname}
+          SetLname={SetLname}
+          SetAge={SetAge}
+          SetGender={SetGender}
+          SetEmail={SetEmail}
+          SetPassword={SetPassword}
+          SetCity={SetCity}
+          SetUpdate={SetUpdate}
+          Find={Find}
+          SetFind={SetFind}
+          SetUpdateData={SetUpdateData}
+          Upindex={Upindex}
+          SetUpindex={SetUpindex}
+        />
+      </div>}
     </>
   )
 }

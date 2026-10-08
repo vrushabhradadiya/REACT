@@ -16,7 +16,7 @@ export default function Form_insert(props) {
 
     const checkValidation = () => {
         if (Fname === "" || Lname === "" || Age === "" || Gender === "" || City === "" || Email === "" || Password === "" || Address === "") {
-            return true;
+            return true
         }
 
     };
@@ -32,12 +32,12 @@ export default function Form_insert(props) {
 
         if (Update) {
             let oldData=[...Data]
-            oldData[Upindex]=newData;
-            SetData(oldData);
-            SetUpdate(false);
-            SetUpindex(null);
-            clear();
-            return;
+            oldData[Upindex]=newData
+            SetData(oldData)
+            SetUpdate(false)
+            SetUpindex(null)
+            clear()
+            return
         }
         SetData([...Data, newData]);
         clear();
@@ -51,13 +51,11 @@ export default function Form_insert(props) {
     };
 
     return (
-        <form onSubmit={dataHandler} className="px-12 flex flex-col gap-2 bg-[#eef] py-6"
-        >
+        <form onSubmit={dataHandler} className="px-12 flex flex-col gap-2 bg-[#eef] py-6">
             <h1 className="text-4xl mt-3 font-medium uppercase">
                 Registration Form
             </h1>
 
-            {/* First Name + Last Name */}
             <div className="flex gap-3">
                 <div className="w-full">
                     <fieldset className="border-[#cacaca] border-2 px-5 rounded-3xl">
