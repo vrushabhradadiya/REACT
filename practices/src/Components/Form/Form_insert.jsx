@@ -23,16 +23,16 @@ export default function Form_insert(props) {
 
     const dataHandler = (e) => {
         e.preventDefault();
-        // if (checkValidation()) {
-        //     alert("Please fill all fields");
-        //     return;
-        // }
+        if (checkValidation()) {
+            alert("Please fill all fields");
+            return;
+        }
         let newData = { Fname, Lname, Age, Gender, Email, Password, City, Address };
 
 
         if (Update) {
-            let oldData=[...Data]
-            oldData[Upindex]=newData
+            let oldData = [...Data]
+            oldData[Upindex] = newData
             SetData(oldData)
             SetUpdate(false)
             SetUpindex(null)

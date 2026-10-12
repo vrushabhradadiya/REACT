@@ -20,7 +20,6 @@ export default function Form() {
   let [Find, SetFind] = useState(false)
   return (
     <>
-
       <div className='w-full'>
         <Form_insert
           Data={Data}
