@@ -16,7 +16,7 @@ export default function Carts_Item() {
                             />
                         </div>
                         <div className="">
-                            <h2 className="truncate text-xl font-normal text-black ">
+                            <h2 className="truncate text-xl font-normal text-black mr-3">
                                 Unico Heavy Duty Dual Arm TV Wall Mount for 23 to 55 Inch
                                 LED/LCD ...
                             </h2>
@@ -68,21 +68,21 @@ export default function Carts_Item() {
                 <div className="grid grid-cols-3 divide-y   divide-gray-200 ">
                     <button
                         type="button"
-                        className="flex items-center justify-center gap-3 px-4 py-5 text-xl font-semibold text-gray-500 transition hover:bg-gray-50"
+                        className="flex items-center justify-center gap-3 px-4 py-3 text-lg font-semibold text-gray-500 transition hover:bg-gray-50"
                     >
                         <RiInboxArchiveLine className="text-base" />
                         Save for later
                     </button>
                     <button
                         type="button"
-                        className="flex items-center justify-center gap-3 px-4 py-5 text-xl font-semibold text-gray-500 transition hover:bg-gray-50"
+                        className="flex items-center justify-center gap-3 px-4 py-3 text-lg font-semibold text-gray-500 transition hover:bg-gray-50"
                     >
                         <RiDeleteBinLine className="text-base" />
                         Remove
                     </button>
                     <button
                         type="button"
-                        className="flex items-center justify-center gap-3 px-4 py-5 text-xl font-semibold text-gray-500 transition hover:bg-gray-50"
+                        className="flex items-center justify-center gap-3 px-4   py-3 text-lg font-semibold text-gray-500 transition hover:bg-gray-50"
                     >
                         <RiFlashlightLine className="text-base" />
                         Buy this now

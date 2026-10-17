@@ -23,7 +23,7 @@ export default function Cart_price() {
                     <p className="text-xl text-gray-500">- ₹1,000</p>
                 </div>
 
-                <div className="border-t border-dashed border-gray-200 mb-8"></div>
+                <div className=" border-gray-200 mb-8"></div>
 
                 <div className="border-t border-gray-200 pt-7 flex justify-between items-center mb-5">
                     <p className="text-lg font-serif">Total Amount</p>
